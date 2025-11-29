@@ -1,0 +1,86 @@
+html {
+    scroll-behavior: smooth;
+}
+
+nav .logo::before {
+    height: 20px;
+    width: 20px;
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    border-bottom: 5px solid var(--basic-theme);
+    border-left: 5px solid var(--basic-theme);
+}
+
+nav .logo::after {
+    height: 20px;
+    width: 20px;
+    content: '';
+    top: 0px;
+    right: -20px;
+    position: absolute;
+    border-top: 5px solid var(--basic-theme);
+    border-right: 5px solid var(--basic-theme);
+}
+
+nav svg {
+    font-size: 18px;
+}
+
+.hamburger svg {
+    font-size: 40px;
+}
+
+.myimg-container::before {
+    content: ' ';
+    position: absolute;
+    background: conic-gradient(from 180deg at 50% 50%,
+            #0aefff -69.37deg,
+            #0f83ff 31.88deg,
+            #b056e7 120deg,
+            #ff9966 204.37deg,
+            #0aefff 290.63deg,
+            #0f83ff 391.87deg);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(100px);
+}
+
+.video-container {
+    position: relative;
+    overflow: hidden;
+    width: 30rem;
+    height: 16.5625rem;
+    padding: 35px 35px 0px 35px;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 3px 3px 12px #5a5a5a;
+}
+
+.videos-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.videos-container iframe:hover {
+    transform: scale(1.33);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: 1px solid rgb(191, 191, 191);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 14px;
+}
+
+@media screen and (max-width:500px) {
+    .video-container {
+        width: 90vw;
+        height: 13.5625rem;
+    }
+}
